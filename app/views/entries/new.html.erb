@@ -1,0 +1,20 @@
+<h2>Suggest a Hobo or a Hipster</h2>
+
+<%= semantic_form_for @entry, :html => {:multipart => true} do |f| %>
+
+	<%=f.input :submitter, :label => "Your name" %>
+
+	<%=f.input :name, :hint => 'Give this lovable hipster a clever nickname, and see if they can hack it in the rough world of hipster vs. hobo.' %>
+	
+	<%=f.input :source_name, :hint => 'All hipsters believe in fair attribution. Who\'s photobucket did you drag this Urban Outfitters reject out of?' %>
+	
+	<!-- what's the best way to present an or option for a form? -->
+	<fieldset>
+	<%=f.input :image_url, :label => 'Image URL' %>
+	<strong> &mdash; or &mdash; </strong>
+	<%=f.input :image, :label => 'Upload a file' %>
+	</fieldset>
+	
+	<%=f.submit 'Suggest!'%>
+	
+<% end %>

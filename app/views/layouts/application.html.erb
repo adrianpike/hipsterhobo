@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hipster or Hobo?</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+	<header>
+		<h1>Hipster or Hobo?</h1>
+	</header>
+
+	<% if flash[:notice] then %>
+	<div class="notice">
+		<%=flash[:notice]%>
+	</div>
+	<% end %>
+	
+	<%= yield %>
+
+	<footer>
+		<ul class="links">
+			<li><%=link_to 'Suggest a Hobo or Hipster!', new_entry_path %></li>
+			<li><%=link_to 'Random Hipster', '/'%>
+		</ul>
+
+		<div class="copyright">
+			&copy; 2010 The League of Extraordinary Hipsters
+		</div>
+	</footer>
+
+</body>
+</html>

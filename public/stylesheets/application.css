@@ -1,0 +1,17 @@
+article.vote {
+	border:1px solid red;
+	width:300px;
+	float:left;
+}
+
+article.entry {
+	border:1px solid red;
+	width:600px;
+	margin:0px auto;
+}
+
+.small_image {
+	width:100px;
+	display:block;
+	margin:0px auto;
+}
