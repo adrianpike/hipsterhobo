@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   
   def authorize(username, password)
     # I'm setting these in an intitializer that's in my .gitignore. TODO: use a heroku setting
-    username == ADMIN_USERNAME
-    password == ADMIN_PASSWORD
+    username == (ADMIN_USERNAME || ENV['USERNAME'])
+    password == (ADMIN_PASSWORD || ENV['PASSWORD'])
   end
 end
