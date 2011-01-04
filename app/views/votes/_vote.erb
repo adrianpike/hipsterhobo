@@ -1,5 +1,6 @@
 <article class="vote">
-	<p class="results">Official rating of <em class="hipster_score"><%=vote.entry.hipster_percentage%>%</em> hipster, based upon <em class="votes_count"><%=vote.entry.votes_count%></em> votes.</p>
 	<%=link_to image_tag(vote.entry.url(:thumb), :class => 'small_image'), vote.entry %>
-	<strong class="your_vote">You voted <%=vote.humanized_score %>.</strong>
+	<p class="results">Official rating of <strong class="hipster_score"><%=vote.entry.hipster_percentage%>%</strong> hipster, based upon <%=vote.entry.votes_count%> votes.
+	  You voted <strong class="your_vote"><%=vote.humanized_score %></strong>.  
+	</p>	
 </article>

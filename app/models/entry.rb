@@ -4,7 +4,7 @@ class Entry < ActiveRecord::Base
   validates_presence_of :image, :if => Proc.new { |thing| thing.source_url.blank? }  
   
   has_many :votes
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :image, :styles => { :large => "480x640>", :thumb => "48x48#" }
   
   def self.random
     self.find(:first, :order => 'random()', :conditions => {:approved => true})

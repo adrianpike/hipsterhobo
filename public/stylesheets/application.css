@@ -1,17 +1,27 @@
-article.vote {
-	border:1px solid red;
-	width:300px;
-	float:left;
-}
-
-article.entry {
-	border:1px solid red;
-	width:600px;
-	margin:0px auto;
-}
-
-.small_image {
-	width:100px;
-	display:block;
-	margin:0px auto;
-}
+*{margin:0;padding:0;}
+section,article,header,footer{display:block;}
+.awesomeize{font-family:"league-gothic-1","league-gothic-2",Impact;}
+.roundy{-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+html{background:#FEFFB7;color:#544a44;text-shadow:0 1px 0 #fffff0;}html body{font-family:"skolar-1","skolar-2",Georgia,"Times New Roman";width:960px;margin:0 auto;}
+html a{text-decoration:none;color:#2A5985;}html a:hover{color:#E9AC29;}
+html h1,html h2,html h3{font-family:"league-gothic-1","league-gothic-2",Impact;text-transform:uppercase;}
+html h2{font-size:2em;font-weight:normal;margin-bottom:1em;}
+html header{margin-bottom:20px;}html header h1{text-align:center;font-size:8em;text-transform:uppercase;}html header h1 a{color:#87822E;}html header h1 a .fo_shizzle{color:#E9AC29;}
+html header h1 a .que{color:#E9AC29;}
+html header h1 a:hover{color:#E9AC29;}html header h1 a:hover span{color:#87822E;}
+html .entry{text-align:center;}html .entry img{display:block;margin:0 auto 20px;}
+html .entry .vote_controls{margin-top:20px;}
+html .entry form{display:inline-block;margin:0 10px;}html .entry form input{border:none;padding:5px 15px 3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#fff;font-family:"league-gothic-1","league-gothic-2",Impact;font-size:1.5em;text-transform:uppercase;background:#E9AC29;}html .entry form input:hover{background:#2A5985;cursor:pointer;}
+html .entry .name{font-size:.9em;font-weight:bold;}
+html .entry .attribution{font-size:.8em;font-style:italic;}
+html .vote{width:50%;margin:0 auto 20px;border:1px solid #D1CD7A;padding:10px;overflow:hidden;}html .vote img{height:48px;width:48px;float:left;}
+html .vote p{margin-left:58px;margin-top:4px;}
+html footer{font-size:.85em;margin-top:20px;padding-top:20px;border-top:1px dashed #D1CD7A;margin-bottom:20px;}html footer ul{list-style-type:none;text-align:center;}html footer ul li{display:inline-block;margin:0 10px;}
+html footer .copyright{margin-top:20px;text-align:center;font-variant:small-caps;}
+form.formtastic{margin-bottom:1em;text-align:left;}form.formtastic input{font-family:"skolar-1","skolar-2",Georgia,"Times New Roman";}form.formtastic input:focus{outline:0;}
+form.formtastic fieldset{border:none;}
+form.formtastic ul,form.formtastic ol{list-style-type:none;}form.formtastic ul li,form.formtastic ol li{margin-bottom:1em;overflow:hidden;}form.formtastic ul li label,form.formtastic ol li label{float:left;width:12%;line-height:2.2em;}
+form.formtastic ul li input[type=text],form.formtastic ol li input[type=text],form.formtastic ul li input[type=url],form.formtastic ol li input[type=url]{border:1px solid #D1CD7A;padding:4px;float:left;width:30%;font-size:1.1em;}
+form.formtastic ul li .inline-hints,form.formtastic ol li .inline-hints{font-size:.8em;font-style:italic;clear:both;margin-left:12%;color:#71645B;}
+form.formtastic ul li input[type=submit],form.formtastic ol li input[type=submit]{border:none;padding:5px 15px 3px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;color:#fff;font-family:"league-gothic-1","league-gothic-2",Impact;font-size:1.5em;text-transform:uppercase;background:#E9AC29;}form.formtastic ul li input[type=submit]:hover,form.formtastic ol li input[type=submit]:hover{background:#2A5985;cursor:pointer;}
+form.formtastic ul li.or,form.formtastic ol li.or{color:#71645B;font-style:italic;position:relative;margin-bottom:.25em;margin-top:-0.75em;padding-left:1em;}
