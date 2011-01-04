@@ -11,7 +11,7 @@ class Entry < ActiveRecord::Base
   end
   
   def url(size = :large)
-    source_url || image.url(size)
+    image_url || image.url(size)
   end
   
   def votes_count
