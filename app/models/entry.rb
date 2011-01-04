@@ -10,7 +10,7 @@ class Entry < ActiveRecord::Base
     self.find(:first, :order => 'random()', :conditions => {:approved => true})
   end
   
-  def url(size = :medium)
+  def url(size = :large)
     source_url || image.url(size)
   end
   
