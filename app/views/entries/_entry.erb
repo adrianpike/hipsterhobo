@@ -1,21 +1,23 @@
 <article class="entry">
-	<%=image_tag @entry.url, :alt => @entry.name %>
+	<%=image_tag entry.url, :alt => entry.name %>
 	    
-	<div class="name"><%= @entry.name %></div>
+	<div class="name"><%= entry.name %></div>
 	<div class="attribution">
-	  <% if @entry.source_name %>
-	    via <%= @entry.source_name %>
+	  <% if entry.source_name %>
+	    via <%= entry.source_name %>
 	  <% end %>
 	</div>          
 	   
-	<div class="vote_controls">  
-  	<%=form_for [@entry,@vote] do |f| %>
-  		<%=f.hidden_field(:score, :value => 10) %>
-  		<%=f.submit "Hipster" %>
-  	<% end %>	  
-  	<%=form_for [@entry,@vote] do |f| %>
-  		<%=f.hidden_field(:score, :value => 0) %>
-  		<%=f.submit "Hobo" %>
-  	<% end %>	
-  </div>
+	<% if @vote then %>
+		<div class="vote_controls">  
+	  		<%=form_for [entry,@vote] do |f| %>
+		  		<%=f.hidden_field(:score, :value => 10) %>
+		  		<%=f.submit "Hipster" %>
+		  	<% end %>	  
+		  	<%=form_for [entry,@vote] do |f| %>
+		  		<%=f.hidden_field(:score, :value => 0) %>
+		  		<%=f.submit "Hobo" %>
+		  	<% end %>	
+  		</div>
+	<% end %>
 </article>

@@ -1,0 +1,19 @@
+<article class="entry">
+	<%=image_tag approval.url, :alt => approval.name %>
+	    
+	<div class="name"><%= approval.name %></div>
+	<div class="attribution">
+	  <% if approval.source_name %>
+	    via <%= approval.source_name %>
+	  <% end %>
+	</div>          
+	 
+	<%=form_for approval, :url => approve_entry_path(approval), :html => {:method => 'post'} do |f| %>
+  		<%=f.submit "HOT ENOUGH FOR THIS SITE" %>
+  	<% end %>	  
+	
+	<%=form_for approval, :url => entry_path(approval), :html => {:method => 'delete'}  do |f| %>
+  		<%=f.submit "REJECTION IS A HARSH MASTER" %>
+  	<% end %>	  
+	
+</article>
